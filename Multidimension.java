@@ -12,6 +12,7 @@ public class Multidimension {
                 arr[i][j] = sc.nextInt();
             }
         }
+
         for (int y = 0 ; y < arr.length ; y++){
             for (int z = 0; z < arr[y].length; z++){
                 System.out.print(arr[y][z]+" ");
