@@ -5,26 +5,23 @@ import java.util.Scanner;
 public class Palindrome {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a number: ");
+        System.out.println("Enter the element: ");
         int number = sc.nextInt();
-
-        if (isPalindrome(number)) {
-            System.out.println(number + " is a palindrome.");
-        } else {
-            System.out.println(number + " is not a palindrome.");
+        if (isPalindrome(number)){
+            System.out.println("Number is palindrome: "+number);
+        }else {
+            System.out.println("Number is not palindrome: "+number);
         }
-
-        sc.close();
     }
+
     private static boolean isPalindrome(int num) {
         int originalNumber = num;
-        int reversedNumber = 0;
-
-        while (num > 0) {
+        int reverseNumber = 0;
+        while (num > 0){
             int digit = num % 10;
-            reversedNumber = reversedNumber * 10 + digit;
+            reverseNumber = reverseNumber * 10 + digit;
             num /= 10;
         }
-        return originalNumber == reversedNumber;
+        return originalNumber == reverseNumber;
     }
 }
